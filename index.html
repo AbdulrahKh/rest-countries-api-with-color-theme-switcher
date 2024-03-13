@@ -1,12 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./src/output.css" />
   </head>
-  <body>
+  <body
+    class="font-nunito bg-[#fafafa] text-[#111517] dark:text-white dark:bg-[#202c37]"
+  >
+    <header
+      class="flex flex-row justify-between py-10 px-8 sm:py-6 sm:px-4 bg-white dark:bg-[#2b3945]"
+    >
+      <div class="font-bold">Where in the world?</div>
+      <button id="dark-mode-button">
+        <i class="fa-regular fa-moon"></i>
+        Dark Mode
+      </button>
+    </header>
+    <nav class="m-8 flex flex-col sm:flex-row sm:justify-between gap-8 sm">
+      <div
+        class="bg-white flex flex-row sm:w-1/3 items-center border-0 rounded-md shadow-[0_0_10px_0_rgba(0,0,0,0.1)] overflow-hidden dark:bg-[#2b3945]"
+      >
+        <i class="fa-solid fa-magnifying-glass p-4"></i>
+        <input
+          class="p-4 flex-grow border-none outline-none dark:bg-[#2b3945]"
+          type="search"
+          id="searchBar"
+          placeholder="Search for a country..."
+        />
+      </div>
+      <div class="w-fit relative cursor-pointer">
+        <div
+          id="regionFilter"
+          class="py-4 px-8 flex flex-row gap-12 items-center bg-white rounded-md shadow-[0_0_10px_0_rgba(0,0,0,0.1)] dark:bg-[#2b3945]"
+        >
+          <span>Filter By Region</span>
+          <i class="fa fa-caret-down caret"></i>
+        </div>
+        <ul
+          id="regionSelect"
+          class="hidden absolute mt-1 w-full bg-white rounded-md shadow-[0_0_10px_0_rgba(0,0,0,0.1)] dark:bg-[#2b3945]"
+        >
+          <li class="rounded-md pb-2 pt-4 px-8">Africa</li>
+          <li class="rounded-md py-2 px-8">America</li>
+          <li class="rounded-md py-2 px-8">Asia</li>
+          <li class="rounded-md py-2 px-8">Europe</li>
+          <li class="rounded-md pb-4 pt-2 px-8">Oceania</li>
+        </ul>
+      </div>
+    </nav>
+    <main
+      id="main-container"
+      class="flex flex-row flex-wrap gap-12 items-center justify-center"
+    ></main>
+    <script
+      src="https://kit.fontawesome.com/c456d5abb1.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="./index.js"></script>
   </body>
 </html>
